@@ -1,0 +1,23 @@
+-Regression to predict 9 variables
+-Take care of missing data in topics
+-Evaluation = L2 prediction accuracy (use loss function as mentined in error metric.pdf)
+-health_physunh and health_mentunh can range from 0 to 31
+-check range for health_aamort
+-p>n (features are more than n, PCA or regularization)
+-multi-task learning
+-2 very differnt features
+-divide data into training and cross-validation
+-is county number an input feature?  
+-look into the FIPS code notation, what each number stand for?
+-look into 'cell mode' in MATLAB
+-look into misclassified data carefully. Are they outliers that should be removed from the training set? Is there a new feature you need to add to account for these hard examples?
+-incase of doing Multiclass classification, account for expectation of the data
+-handle new features in test, that do not occur in training. (like new words). One solution to this is to run PCA on the entire dataset. 
+-try feature selection - L0 - stagewise, stepwise, streamwiswe...
+-ensenble on many levels - combining different types of features, 9 different models for each output class, different models for all classes together...
+-maybe standardize the data? if using regularization penalty is most likely required.
+-for text data try easy features first
+-the outputs are massively correalted
+-ensemble of multiple models should give the best model.
+-rural vs urban counties will show very different behaviours.
+
