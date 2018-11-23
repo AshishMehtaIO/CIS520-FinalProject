@@ -1,0 +1,6 @@
+-*cell mode*
+-In Matlab, you can compute variance, mean, and standard deviation with the var, mean, and std commands. 
+-K-means: kmeans, PCA: princomp, SVD: svd, compute pairwise distances: pdist, general clustering: cluster, generalized linear model regression: glmfit
+-the Lightspeed toolbox by Tom Minka provides many handy functions like rows and cols and logsumexp (for taking the sum of a bunch of log-domain numbers without ever leaving log space), a much faster repmat, tons of probability distributions and sampling methods, and more. 
+-Run the command dbstop if error to enable a debugging breakpoint whenever an error occurs in your code
+
