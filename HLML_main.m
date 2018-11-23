@@ -10,11 +10,10 @@ num_folds = 10;
 
 for iter_num = 1:max(train_cval_parts)
     
-    fprintf('Cross validation iteration %d', iter_num);
+    fprintf('\n\nCross validation iteration %d\n\n', iter_num);
     
-    [Xtrain, Ytrain, XCV, YCV] = ...
-      make_folds(train_cval_parts, train_cval_input, ...
-      train_cval_label, iter_num);
+    [Xtrain, Ytrain, XCV, YCV] = make_folds(train_cval_parts, ...
+        train_cval_input, train_cval_labels, iter_num);
   
     % model, training_error = some_training_fn(Xtrain, Ytain)
     % YCV_hat = @model(XCV)
