@@ -1,6 +1,10 @@
 function pred_labels=predict_labels(train_inputs,train_labels,test_inputs)
 
-pred_labels=randn(size(test_inputs,1),size(train_labels,2));
+    % Function that has to be modified with your training function
+    % Modify the function name below as required. An example
+    % random_precitor baseline is shown below
 
+    % pred_labels = your_training_function(train_inputs, train_labels,
+    % test_inputs);
+    % pred_labels = random_predictor(train_inputs,train_labels,test_inputs);
 end
-
