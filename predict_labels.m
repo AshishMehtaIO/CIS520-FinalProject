@@ -8,6 +8,10 @@ function pred_labels=predict_labels(train_inputs,train_labels,test_inputs)
     % test_inputs);
     % pred_labels = random_predictor(train_inputs,train_labels,test_inputs);
     
+<<<<<<< HEAD
     % nvaive_linear_regression (may fail if xTx is not inveritible)
-    pred_labels=lr_bias(train_inputs,train_labels,test_inputs);
+    % pred_labels=lr_bias(train_inputs,train_labels,test_inputs);
+=======
+    pred_labels = standardized_LR(train_inputs,train_labels,test_inputs);
+>>>>>>> 29878610f988e81bca021402f6023ef0273e31eb
 end
