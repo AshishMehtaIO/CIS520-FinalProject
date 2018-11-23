@@ -7,4 +7,6 @@ function pred_labels=predict_labels(train_inputs,train_labels,test_inputs)
     % pred_labels = your_training_function(train_inputs, train_labels,
     % test_inputs);
     % pred_labels = random_predictor(train_inputs,train_labels,test_inputs);
+    
+    pred_labels = standardized_LR(train_inputs,train_labels,test_inputs);
 end
