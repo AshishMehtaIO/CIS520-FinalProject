@@ -4,7 +4,7 @@ Experimental observations & inferences:
 	-inv((1,x)' (1,x)) (bias added) is better but still val_error ~ 60.
 	-pinv((1,x)) provides gives val_error ~ 0.12. but training error = 0. Indicates overfitting. 
 	 Regularization penalty should be used.
-	-pinv((1,x)) with standardization again val_error ~ 0.12.
+	-pinv((1,x)) with standardization again gives val_error ~ 0.12.
 	-using regress with standardization and biased gives 0 training error and 0.68 validation error.
 	
 -Ridge Regression:
