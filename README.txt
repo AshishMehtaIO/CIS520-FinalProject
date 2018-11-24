@@ -1,3 +1,22 @@
+Experimental inferences:
+-LR:
+	-inv(X'X) is close to singluar. output predictions were negative. val_error ~ 90.
+	-inv((1,x)' (1,x)) (bias added) is better but still val_error ~ 60.
+	-pinv((1,x)) provides gives val_error ~ 0.12. but training error = 0. Indicates overfitting. Regularization penalty should be used.
+	-pinv((1,x)) with standardization gives training error ~ 1.5 and val_error ~ 1.5. (does not overfit but performs poorly).
+	-using regress with standardization and biased gives 0 training error and 0.68 validation error.
+	
+-Ridge Regression:
+	-with lambda = 1e-2, training_error ~ 0.000008, avg_cv = 0.127
+	-with lambda = 1.5e-2, training_error ~ 0.000012, avg_cv = 0.128						
+	-with lambda = 1.5e-1, training_error ~ 0.000119, avg_cv = 0.126
+	-with lambda = 1, training_error ~ 0.000781, avg_cv = 0.125
+	-with lambda = 100, training_error ~ 0.02, avg_cv = 0.093256
+
+-Stepwise
+	-selecting ~300 for each y, without_standardizing the data, tr_err = 3.314. val = 3.319					
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 training_data.csv
 
 Features and labels are contained in the file training_data.csv. Here is the description of each column in the file.
