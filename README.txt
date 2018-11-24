@@ -12,6 +12,12 @@ Experimental observations & inferences:
 	-with lambda = 1.5e-1, training_error ~ 0.000119, avg_cv = 0.126
 	-with lambda = 1, training_error ~ 0.000781, avg_cv = 0.125
 	-with lambda = 100, training_error ~ 0.02, avg_cv = 0.093256
+	-with lambda = 10, training_error ~ 0.005, avg_cv = 0.116140 (higher lambda required)
+	-with lambda = 1000, training_error ~ 0.05, avg_cv = 0.086762
+	-with lambda = 10000, training_error ~ 0.09, avg_cv = 0.104666 (ideal lambda between 100 and 10000)
+	-with lambda = 3000, training_error ~ 0.075, avg_cv = 0.09352 (ideal lambda between 100 and 3000)
+	-with lambda = 700, training_error ~ 0.05, avg_cv = 0.085831 (ideal lambda between 100 and 1000)
+	-with lambda = 300, training_error ~ 0.037, avg_cv = 0.086693 (ideal lambda between 300 and 1000)
 
 -Stepwise
 	-selecting ~300 for each y, without_standardizing the data, tr_err = 3.314. val = 3.319					
