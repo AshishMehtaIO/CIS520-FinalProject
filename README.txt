@@ -14,7 +14,8 @@ Experimental observations & inferences:
 	-with lambda = 100, training_error ~ 0.02, avg_cv = 0.093256
 
 -Stepwise
-	-selecting ~300 for each y, without_standardizing the data, tr_err = 3.314. val = 3.319					
+	-selecting ~300 for each y, without_standardizing the data, tr_err = 3.314. val_er = 3.319	
+	-selecting ~300 for each y, with standardizing the data, stepwise tr_err= 0.921490, val_er: 0.938327
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 training_data.csv
