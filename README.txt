@@ -2,8 +2,9 @@ Experimental observations & inferences:
 -LR:
 	-inv(X'X) is close to singluar. output predictions were negative. val_error ~ 90.
 	-inv((1,x)' (1,x)) (bias added) is better but still val_error ~ 60.
-	-pinv((1,x)) provides gives val_error ~ 0.12. but training error = 0. Indicates overfitting. Regularization penalty should be used.
-	-pinv((1,x)) with standardization gives training error ~ 1.5 and val_error ~ 1.5. (does not overfit but performs poorly).
+	-pinv((1,x)) provides gives val_error ~ 0.12. but training error = 0. Indicates overfitting. 
+	 Regularization penalty should be used.
+	-pinv((1,x)) with standardization again gives val_error ~ 0.12.
 	-using regress with standardization and biased gives 0 training error and 0.68 validation error.
 	
 -Ridge Regression:
@@ -20,7 +21,8 @@ Experimental observations & inferences:
 	-with lambda = 300, training_error ~ 0.037, avg_cv = 0.086693 (ideal lambda between 300 and 1000)
 
 -Stepwise
-	-selecting ~300 for each y, without_standardizing the data, tr_err = 3.314. val = 3.319					
+	-selecting ~300 for each y, without_standardizing the data, tr_err = 3.314. val_er = 3.319	
+	-selecting ~300 for each y, with standardizing the data, stepwise tr_err= 0.921490, val_er: 0.938327
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 training_data.csv
