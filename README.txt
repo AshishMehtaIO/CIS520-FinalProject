@@ -1,4 +1,4 @@
-Experimental inferences:
+Experimental observations & inferences:
 -LR:
 	-inv(X'X) is close to singluar. output predictions were negative. val_error ~ 90.
 	-inv((1,x)' (1,x)) (bias added) is better but still val_error ~ 60.
