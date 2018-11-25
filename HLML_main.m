@@ -18,25 +18,41 @@ function HLML_main(cross_validate, validate)
         train_cval_parts] = load_data(validation_percentage, num_folds);
 
     %% Cross validate to find good hyperparameters
+    % cross validation parameters
+    alpha = [1:1:3];
+    beta = [1:1:3];
+    gamma = 0;
     
     if cross_validate == true
-        cv_error = zeros(1, max(train_cval_parts));
-        for iter_num = 1:max(train_cval_parts)
+  
+        for iter_gamma = 1: numel(gamma)
+            for iter_beta = 1: numel(beta)
+                for iter_alpha = 1: numel(alpha)
+                    
+                    fprintf('\n\nFor alpha %f\n', iter_alpha);
+                    fprintf('For beta %f\n', iter_beta);
+                    fprintf('For gamma %f\n', iter_gamma);
 
-            fprintf('\nCross validation iteration %d\n', iter_num);
+                    cv_error = zeros(1, max(train_cval_parts));
+                    for iter_num = 1:max(train_cval_parts)
 
-            [Xtrain, Ytrain, XCV, YCV] = make_folds(train_cval_parts, ...
-                train_cval_input, train_cval_labels, iter_num);
+                        fprintf('Cross validation iteration %d\n', iter_num);
 
-            YCV_hat = predict_labels(Xtrain, Ytrain, XCV);
-            cv_error(iter_num) = error_metric(YCV_hat, YCV);
+                        [Xtrain, Ytrain, XCV, YCV] = make_folds(train_cval_parts, ...
+                            train_cval_input, train_cval_labels, iter_num);
 
-            fprintf("Cross validation error for iteration %d is %f", ...
-            iter_num, cv_error(iter_num));
+                        YCV_hat = predict_labels_cv(Xtrain, Ytrain, XCV, iter_alpha, iter_beta, iter_gamma);
+                        cv_error(iter_num) = error_metric(YCV_hat, YCV);
+
+                        fprintf("Cross validation error for iteration %d is %f", ...
+                        iter_num, cv_error(iter_num));
+                    end
+
+                    fprintf("\n\nCross validation successfully completed\n");
+                    fprintf("Average cross validation error for alpha %f, beta %f, gamma %f : %f\n", iter_alpha, iter_beta, iter_gamma, mean(cv_error));
+                end
+            end
         end
-
-        fprintf("\n\nCross validation successfully completed\n");
-        fprintf("Average cross validation error: %f\n", mean(cv_error));
     end
 
     %% Train on the whole train_cval data and perform valiadtion on val data
