@@ -1,4 +1,4 @@
-function HLML_main(cross_validate, validate)
+function v_error = HLML_main(cross_validate, validate)
 
     % Function to load the data, splits it into training+crossvalidation and
     % validation and perform cross-validation and validation as required. 
@@ -19,9 +19,13 @@ function HLML_main(cross_validate, validate)
 
     %% Cross validate to find good hyperparameters
     % cross validation parameters
-    alpha = [90, 91, 92, 93];
+    alpha = 2:1:200;
     beta = 0;
     gamma = 0;
+    
+    n = size(alpha,2);
+    
+  v_error = zeros(n, 1);
     
     if cross_validate == true
   
@@ -50,6 +54,7 @@ function HLML_main(cross_validate, validate)
 
                     fprintf("\n\nCross validation successfully completed\n");
                     fprintf("Average cross validation error for alpha %f, beta %f, gamma %f : %f\n", iter_alpha, iter_beta, iter_gamma, mean(cv_error));
+                    v_error(iter_alpha) = mean(cv_error);
                 end
             end
         end
