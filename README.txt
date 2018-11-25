@@ -18,6 +18,8 @@ Experimental observations & inferences:
 	-with lambda = 3000, training_error ~ 0.075, avg_cv = 0.09352 (ideal lambda between 100 and 3000)
 	-with lambda = 700, training_error ~ 0.05, avg_cv = 0.085831 (ideal lambda between 100 and 1000)
 	-with lambda = 300, training_error ~ 0.037, avg_cv = 0.086693 (ideal lambda between 300 and 1000)
+	
+	-validation error: 0.090769, test error: 0.0872.
 
 -Stepwise
 	-selecting ~300 for each y, without_standardizing the data, tr_err = 3.314. val = 3.319					
