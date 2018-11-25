@@ -22,8 +22,18 @@ Experimental observations & inferences:
 	-validation error: 0.090769, test error: 0.0872.
 
 -Stepwise
-	-selecting ~300 for each y, without_standardizing the data, tr_err = 3.314. val = 3.319					
+	-selecting ~300 for each y, without_standardizing the data, tr_err = 3.314. val = 3.319	
 
+-PCR
+-GMM/KMeans
+-RBF
+-Kernel Regression/KNN
+-SVM regression
+-Generalized Linear Models
+-PCA/autoencoder
+-gradient boosting(for ensemble)				
+-split input dataset
+-NN (maybe)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 training_data.csv
 
