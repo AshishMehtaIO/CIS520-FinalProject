@@ -4,5 +4,5 @@ function pred_labels = predict_labels(train_inputs,train_labels,test_inputs)
     % Modify the function name below as required. An example
     % random_precitor baseline is shown below
 
-    pred_labels = PCR(train_inputs, train_labels, test_inputs);
+    pred_labels = PCR(train_inputs, train_labels, test_inputs, 90);
 end
