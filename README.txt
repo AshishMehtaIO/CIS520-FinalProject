@@ -24,6 +24,8 @@ Experimental observations & inferences:
 -Stepwise
 	-selecting ~300 for each y, without_standardizing the data, tr_err = 3.314. val = 3.319	
 
+-Elastic Net
+	
 -PCR
 -GMM/KMeans
 -RBF
