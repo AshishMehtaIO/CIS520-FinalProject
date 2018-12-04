@@ -24,9 +24,17 @@ Experimental observations & inferences:
 -Stepwise
 	-selecting ~300 for each y, without_standardizing the data, tr_err = 3.314. val = 3.319	
 
--Elastic Net
 	
 -PCR
+	- Reduced Dim = 90
+	- Performance: training error = 0.068341, validation error =0.082862 , test error = 0.0802 .
+
+
+-Elastic Net
+
+
+
+
 -GMM/KMeans
 -RBF
 -Kernel Regression/KNN
