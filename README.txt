@@ -28,7 +28,8 @@ Experimental observations & inferences:
 -PCR
 	- Reduced Dim = 90
 	- Performance: training error = 0.068341, validation error =0.082862 , test error = 0.0802 .
-
+	
+	- PCR with ridge - 0.14 best after cval over a range ...
 
 -Elastic Net
 
