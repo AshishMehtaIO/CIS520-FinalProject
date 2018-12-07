@@ -18,5 +18,9 @@ function pred_labels = predict_labels(train_inputs,train_labels,test_inputs)
 %     pred_labels = elasticNet_standardized_biased(train_inputs, ...
 %     train_labels,test_inputs);
 
-    pred_labels = glm(train_inputs,train_labels,test_inputs, 0, 0, 0);
+    % pred_labels = glm(train_inputs,train_labels,test_inputs, 0, 0, 0);
+%     pred_labels = kernelRegression_PCA(train_inputs,...
+%         train_labels,test_inputs);
+pred_labels = novel_PCR (train_inputs, ...
+        train_labels, test_inputs);
 end
