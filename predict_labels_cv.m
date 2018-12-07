@@ -18,5 +18,12 @@ function pred_labels = predict_labels_cv(train_inputs,train_labels,...
 
     % pred_labels = elasticNet_standardized_biased(train_inputs,...
     %    train_labels,test_inputs, alpha, beta, gamma);
+    %pred_labels = PCR(train_inputs, train_labels, test_inputs, alpha);
+    % pred_labels =  k_means_rbf(train_inputs, train_labels, test_inputs, alpha, beta);
+    % pred_labels = LR_combined(train_inputs,train_labels, test_inputs, alpha);
+    %pred_labels = ridge_standardized_biased(train_inputs,train_labels,test_inputs);
+    
+    
+    pred_labels = k_means_rbf_new2(train_inputs, train_labels, test_inputs, alpha, beta);
     
 end
