@@ -19,8 +19,8 @@ function v_error = HLML_main(cross_validate, validate)
 
     %% Cross validate to find good hyperparameters
     % cross validation parameters
-    alpha = 2:1:200;
-    beta = 0;
+    alpha = [20];
+    beta = [1];
     gamma = 0;
     
     n = size(alpha,2);
@@ -40,7 +40,7 @@ function v_error = HLML_main(cross_validate, validate)
                     cv_error = zeros(1, max(train_cval_parts));
                     for iter_num = 1:max(train_cval_parts)
 
-                        fprintf('Cross validation iteration %d\n', iter_num);
+                        fprintf('\nCross validation iteration %d\n', iter_num);
 
                         [Xtrain, Ytrain, XCV, YCV] = make_folds(train_cval_parts, ...
                             train_cval_input, train_cval_labels, iter_num);
@@ -53,7 +53,7 @@ function v_error = HLML_main(cross_validate, validate)
                     end
 
                     fprintf("\n\nCross validation successfully completed\n");
-                    fprintf("Average cross validation error for alpha %f, beta %f, gamma %f : %f\n", iter_alpha, iter_beta, iter_gamma, mean(cv_error));
+                    fprintf("Average cross validation error for alpha %f, beta %f, gamma %f : %f\n", alpha(iter_alpha), beta(iter_beta), gamma(iter_gamma), mean(cv_error));
                     v_error(iter_alpha) = mean(cv_error);
                 end
             end

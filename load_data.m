@@ -3,7 +3,7 @@ function [val_input, val_labels, train_cval_input, ...
     (validation_percentage, num_folds)
 
     % seed random number generator
-    rng(777);
+    rng(1999);
 
     % load the dataset
     data = importdata('training_data.mat');
